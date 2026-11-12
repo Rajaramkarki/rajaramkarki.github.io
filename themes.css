@@ -1,0 +1,43 @@
+/* Page colors are independent of the original game art and project screenshots. */
+:root{--surface:#182019;--surface-2:#1b2519;--on-accent:#182017;--tag:#c4d3aa;--scene-tint:none;color-scheme:dark}
+:root[data-mode="light"]{--bg:#f6f7ef;--fg:#17271d;--muted:#526354;--lime:#35652a;--line:#c5d0bf;--surface:#edf1e4;--surface-2:#e4ecd8;--on-accent:#ffffff;--tag:#3e6036;color-scheme:light}
+:root[data-mode="dark"][data-palette="ocean"]{--bg:#101923;--fg:#e9f2fa;--muted:#a3b6c9;--lime:#81c9f5;--line:#34495b;--surface:#172534;--surface-2:#1c3042;--on-accent:#112331;--tag:#aacde3;--scene-tint:hue-rotate(65deg)}
+:root[data-mode="light"][data-palette="ocean"]{--bg:#f1f6fb;--fg:#172b41;--muted:#4d647a;--lime:#225f94;--line:#c2d2e0;--surface:#e6eff8;--surface-2:#dae8f5;--on-accent:#ffffff;--tag:#345d7d;--scene-tint:hue-rotate(65deg)}
+:root[data-mode="dark"][data-palette="ember"]{--bg:#211714;--fg:#faeee2;--muted:#c5ada0;--lime:#f5b183;--line:#594138;--surface:#2e211c;--surface-2:#3a2920;--on-accent:#311a0f;--tag:#dbba9d;--scene-tint:hue-rotate(-35deg)}
+:root[data-mode="light"][data-palette="ember"]{--bg:#fcf5ed;--fg:#3b261c;--muted:#755c4c;--lime:#96461f;--line:#dcc8b7;--surface:#f5eadd;--surface-2:#efdfcc;--on-accent:#ffffff;--tag:#805137;--scene-tint:hue-rotate(-35deg)}
+.featured-project,.game{background:var(--surface);border-color:var(--line)}
+.resume-callout{background:var(--surface-2);border-color:var(--line)}
+.featured-heading .eyebrow,.project-details summary{color:var(--lime)}
+.featured-badge,.tags{color:var(--tag)}
+.featured-copy .featured-intro,.featured-copy strong{color:var(--fg)}
+.detail-layout figcaption,.project .source-note,#arena-idle{color:var(--muted)}
+.project-details,.contact-link{border-color:var(--line)}
+.project-details summary:focus-visible{outline-color:var(--lime)}
+.pill,footer,#target,.skip{background:var(--lime);color:var(--on-accent)}
+.resume-secondary{background:transparent;color:var(--lime);border-color:var(--lime)}
+.resume-secondary:hover{background:var(--surface-2)}
+.fine{border-color:currentColor}
+.project-visual .number{color:#edf0df}
+#arena{background-image:radial-gradient(var(--line) 1px,transparent 1px)}
+#target{box-shadow:0 0 25px color-mix(in srgb,var(--lime) 25%,transparent)}
+.world{filter:var(--scene-tint)}
+.header-actions{display:flex;gap:24px;align-items:center}
+.appearance{position:relative;z-index:5;font-size:12px}
+.appearance>summary{list-style:none;cursor:pointer;display:flex;gap:9px;align-items:center;border:1px solid var(--line);border-radius:24px;padding:10px 14px;color:var(--fg);background:var(--surface)}
+.appearance>summary::-webkit-details-marker{display:none}
+.appearance>summary:focus-visible{outline:3px solid var(--lime);outline-offset:4px}
+.appearance[open]>summary{border-color:var(--lime)}
+.theme-panel{position:absolute;top:calc(100% + 12px);right:0;width:300px;max-width:calc(100vw - 32px);padding:22px;background:var(--bg);border:1px solid var(--line);border-radius:12px;box-shadow:0 16px 45px #0003}
+.theme-panel .eyebrow{color:var(--muted);margin-bottom:20px;font-size:10px}
+.theme-panel fieldset{padding:0;border:0;margin:0 0 20px;min-width:0}
+.theme-panel legend{font-size:12px;font-weight:600;margin-bottom:10px}
+.theme-options{display:flex;gap:6px}
+.theme-options button{flex:1;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg);padding:10px 7px;font-size:11px;min-height:44px}
+.theme-options button[aria-pressed="true"]{border-color:var(--lime);outline:1px solid var(--lime);background:var(--surface-2);font-weight:700}
+.palette-dot{display:block;width:22px;height:22px;border-radius:50%;margin:0 auto 8px;border:1px solid #0003}
+.palette-dot.grove{background:linear-gradient(135deg,#35652a 50%,#d3f47a 50%)}
+.palette-dot.ocean{background:linear-gradient(135deg,#225f94 50%,#81c9f5 50%)}
+.palette-dot.ember{background:linear-gradient(135deg,#96461f 50%,#f5b183 50%)}
+.theme-panel p{font-size:11px;margin:0;color:var(--muted)}
+@media(max-width:1000px){nav{gap:20px}.header-actions{gap:16px}}
+@media(max-width:700px){header{height:auto;min-height:75px;flex-wrap:wrap;padding:16px 0;gap:16px}header nav{order:3;width:100%;justify-content:space-between;padding-top:3px}header nav a:last-child{display:block}.header-actions{margin-left:auto;gap:15px}.appearance>summary{padding:9px 12px}.theme-panel{right:0}.theme-panel .eyebrow{font-size:10px}.world{isolation:isolate}}
